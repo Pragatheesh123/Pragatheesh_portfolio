@@ -54,9 +54,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
   return (
     <>
       {/* Top scroll progress line */}
-      <div className="fixed top-0 left-0 right-0 z-50 h-[2px] bg-[#CFCFCF]/50 pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 z-50 h-[2px] bg-white/10 pointer-events-none">
         <div
-          className="h-full bg-[#111111] transition-all duration-100 ease-out"
+          className="h-full bg-white transition-all duration-100 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'py-3 bg-[#E2E2E2]/85 backdrop-blur-md border-b border-[#CFCFCF]'
+            ? 'py-3.5 bg-[#09090b]/85 backdrop-blur-md border-b border-white/10'
             : 'py-6 bg-transparent'
         }`}
       >
@@ -72,17 +72,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           {/* Left Brand: P. */}
           <a
             href="#"
-            className="group flex items-center gap-2 font-mono text-xl sm:text-2xl font-bold tracking-tighter text-[#111111] hover:opacity-75 transition-opacity"
+            className="group flex items-center gap-2 font-mono text-xl sm:text-2xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity"
             aria-label="Pragatheesh Senthil Portfolio Home"
           >
             <span>P.</span>
-            <span className="hidden sm:inline-block text-[11px] font-mono tracking-widest text-[#666666] uppercase font-normal ml-2">
+            <span className="hidden sm:inline-block text-[11px] font-mono tracking-widest text-zinc-400 uppercase font-normal ml-2">
               Data Analyst
             </span>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full border border-[#CFCFCF] bg-[#E8E8E6]/80 backdrop-blur-md shadow-xs">
+          <nav className="hidden md:flex items-center gap-1 px-3.5 py-1.5 rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-md shadow-sm">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -91,8 +91,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                   href={link.href}
                   className={`px-3.5 py-1 text-xs font-mono tracking-wider uppercase transition-all rounded-full ${
                     isActive
-                      ? 'bg-[#111111] text-[#E2E2E2] font-semibold shadow-xs'
-                      : 'text-[#666666] hover:text-[#111111]'
+                      ? 'bg-white text-black font-semibold shadow-xs'
+                      : 'text-zinc-400 hover:text-white'
                   }`}
                 >
                   {link.label}
@@ -101,20 +101,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
             })}
           </nav>
 
-          {/* Right Action: Resume & Contact */}
+          {/* Right Action: Resume & Talk */}
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={onOpenResume}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono tracking-wider uppercase text-[#111111] border border-[#CFCFCF] bg-white/70 hover:bg-[#111111] hover:text-[#E2E2E2] rounded transition-all cursor-pointer shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono tracking-wider uppercase text-zinc-200 border border-white/15 bg-zinc-900 hover:bg-zinc-800 hover:text-white rounded transition-all cursor-pointer shadow-xs"
               title="View Pragatheesh's Resume"
             >
-              <FileText className="w-3.5 h-3.5" />
+              <FileText className="w-3.5 h-3.5 text-zinc-400" />
               <span>Resume</span>
             </button>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-1 px-4 py-1.5 text-xs font-mono tracking-wider uppercase text-[#E2E2E2] bg-[#111111] hover:bg-[#27272a] rounded transition-all cursor-pointer shadow-xs"
+              className="inline-flex items-center gap-1 px-4 py-1.5 text-xs font-mono tracking-wider uppercase text-black bg-white hover:bg-zinc-200 rounded transition-all cursor-pointer font-semibold shadow-xs"
             >
               <span>Talk</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -125,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={onOpenResume}
-              className="p-2 text-[#111111] border border-[#CFCFCF] bg-white/80 rounded"
+              className="p-2 text-zinc-300 border border-white/15 bg-zinc-900 rounded"
               title="Resume"
               aria-label="View Resume"
             >
@@ -134,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#111111] border border-[#CFCFCF] bg-white/80 rounded"
+              className="p-2 text-zinc-300 border border-white/15 bg-zinc-900 rounded"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -144,17 +144,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
 
         {/* Mobile Full-Width Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-b border-[#CFCFCF] bg-[#E2E2E2]/98 backdrop-blur-xl px-6 py-6 mt-2 transition-all">
+          <div className="md:hidden border-b border-white/10 bg-[#09090b]/98 backdrop-blur-xl px-6 py-6 mt-2 transition-all">
             <nav className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.id}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between py-2 text-base font-mono uppercase tracking-wider text-[#111111] border-b border-[#CFCFCF]/50"
+                  className="flex items-center justify-between py-2 text-base font-mono uppercase tracking-wider text-zinc-200 hover:text-white border-b border-white/[0.06]"
                 >
                   <span>{link.label}</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#666666]" />
+                  <ArrowUpRight className="w-4 h-4 text-zinc-500" />
                 </a>
               ))}
 
@@ -164,14 +164,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                     setMobileMenuOpen(false);
                     onOpenResume();
                   }}
-                  className="flex-1 py-2.5 text-xs font-mono uppercase tracking-wider text-[#111111] border border-[#CFCFCF] bg-white rounded text-center"
+                  className="flex-1 py-2.5 text-xs font-mono uppercase tracking-wider text-zinc-200 border border-white/15 bg-zinc-900 rounded text-center"
                 >
                   View Resume (PDF)
                 </button>
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex-1 py-2.5 text-xs font-mono uppercase tracking-wider text-[#E2E2E2] bg-[#111111] rounded text-center"
+                  className="flex-1 py-2.5 text-xs font-mono uppercase tracking-wider text-black bg-white font-semibold rounded text-center"
                 >
                   Get In Touch
                 </a>

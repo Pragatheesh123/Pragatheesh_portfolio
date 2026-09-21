@@ -2,13 +2,13 @@
 
 @layer base {
   * {
-    border-color: #CFCFCF;
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   body {
     font-family: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #E2E2E2;
-    color: #111111;
+    background-color: #09090b;
+    color: #f4f4f5;
   }
 
   code, kbd, samp, pre, .font-mono {
@@ -16,32 +16,32 @@
   }
 }
 
-/* Custom subtle graphite scrollbar */
+/* Custom dark scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #E2E2E2;
+  background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B0B0B0;
+  background: #27272a;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #888888;
+  background: #3f3f46;
 }
 
-/* Graphite paper grid & dot pattern */
-.bg-grid-paper {
-  background-size: 32px 32px;
+/* Subtle dark grid pattern */
+.bg-grid-pattern {
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
-.bg-dot-paper {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .tracking-loose-caps {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 }
 
 /* Seamless infinite ticker animation */
@@ -67,7 +67,7 @@
 .animate-ticker {
   display: flex;
   width: max-content;
-  animation: ticker 28s linear infinite;
+  animation: ticker 32s linear infinite;
 }
 
 .animate-ticker:hover {

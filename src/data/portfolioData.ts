@@ -186,9 +186,8 @@ export const portfolioData: PortfolioData = {
     aboutHeading: "Not just a résumé.",
     aboutSubtitle: "I'm interested in more than one kind of problem.",
     aboutParagraphs: [
-      "I believe most data problems aren't about lacking charts—they're about asking the right questions before touching the software. As a final-year B.Tech Computer Science Engineering student specializing in Big Data Analytics at SRMIST, my focus is on transforming messy, fragmented tables into transparent insights that someone can actually take action on.",
-      "My day-to-day stack centers around SQL, PostgreSQL, Microsoft Excel, Power BI, and Python. Whether that means writing multi-table CTEs to isolate compensation patterns across thousands of job listings, analyzing enterprise data at SRM Technology, or building automated Excel dashboards with dynamic slicers, I take pride in data hygiene, rigorous validation, and clean presentation.",
-      "Outside the dataset, I'm driven by competitive strategy and high-tempo teamwork—whether that's orchestrating plays on the football pitch, calculating candidate moves over a chessboard, or communicating in clutch rounds on Valorant. Analytics is just the professional extension of how I already think."
+      "I look at data the same way I look at a chessboard or a football pitch: understand the rules of the system, cut through the noise, and find the move that actually matters. Most data problems aren't about building a fancier dashboard—they're about asking what decision needs to be made before opening the software.",
+      "By day, that means working with SQL, PostgreSQL, Excel, Power BI, and Python—cleaning up fragmented tables and turning them into clear, actionable answers. Outside the terminal, I'm just as obsessed with strategy and craft, whether that's coordinating clutch rounds on Valorant, analyzing match formations, or cooking a genuinely good white-sauce pasta."
     ],
     institution: "SRM Institute of Science and Technology (SRMIST)",
     institutionShort: "SRMIST",

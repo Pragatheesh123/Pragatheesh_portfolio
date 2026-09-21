@@ -18,7 +18,7 @@ export const App: React.FC = () => {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#E2E2E2] text-[#111111] selection:bg-[#111111] selection:text-[#E2E2E2]">
+    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] selection:bg-white selection:text-black">
       {/* Sticky Editorial Navigation */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
