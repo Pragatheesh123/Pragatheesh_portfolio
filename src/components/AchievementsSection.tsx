@@ -1,90 +1,78 @@
 import React from 'react';
-import { Trophy, CheckCircle2 } from 'lucide-react';
+import { Trophy, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const AchievementsSection: React.FC = () => {
   const { achievement } = portfolioData;
 
   return (
-    <section className="py-24 px-6 sm:px-8 border-b border-white/[0.08] relative bg-zinc-950">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Index Marker */}
-        <div className="flex items-center gap-3 mb-10">
-          <span className="font-mono text-xs text-zinc-400">05 //</span>
-          <span className="text-xs font-mono tracking-loose-caps uppercase text-zinc-400">
-            Honors & Awards
-          </span>
-          <div className="h-[1px] flex-1 bg-white/[0.08]" />
-        </div>
-
+    <section className="py-28 px-6 sm:px-8 border-b border-zinc-800 bg-[#111111] text-[#E2E2E2] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
-            Things I'm proud of.
-          </h2>
-          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            High-intensity team competitions where rapid problem solving, clean data structuring, and clear communication won first place.
-          </p>
+        <div className="flex items-center gap-3 mb-14">
+          <span className="font-mono text-xs text-white font-bold">04 //</span>
+          <span className="text-xs font-mono tracking-loose-caps uppercase text-zinc-400">
+            WHAT I'VE WON
+          </span>
+          <div className="h-[1px] flex-1 bg-zinc-800" />
         </div>
 
-        {/* Hero Achievement Card */}
-        <div className="relative rounded-2xl border border-white/20 bg-gradient-to-b from-zinc-900/80 to-zinc-950 p-8 sm:p-12 overflow-hidden">
-          {/* Subtle background glow & watermark */}
-          <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-96 h-96 rounded-full bg-white/[0.02] blur-3xl pointer-events-none" />
-          <div className="absolute right-8 bottom-6 opacity-5 pointer-events-none hidden md:block">
-            <Trophy className="w-64 h-64 text-white" />
-          </div>
-
-          <div className="relative z-10 max-w-3xl space-y-8">
-            {/* Badge & Label */}
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-black font-mono text-xs font-bold uppercase tracking-wider">
-                <Trophy className="w-3.5 h-3.5" />
-                Winner — 1st Place
-              </div>
-              <span className="text-xs font-mono text-zinc-400">
-                50-Hour Med-Tech Hackathon
-              </span>
+        {/* Large Editorial Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Big Typographic Left (7 cols) */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-black font-mono text-xs font-bold uppercase tracking-wider">
+              <Trophy className="w-3.5 h-3.5" />
+              <span>First Place Winner</span>
             </div>
 
-            {/* Main Typographic Display */}
             <div>
-              <div className="text-xs font-mono tracking-loose-caps uppercase text-zinc-400 mb-1">
-                Intercollegiate Engineering Challenge
+              <div className="text-sm font-mono tracking-[0.25em] uppercase text-zinc-400 mb-2">
+                Intercollegiate Med-Tech Hackathon
               </div>
-              <h3 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-none">
-                Mediathon
-              </h3>
-              <div className="text-xl sm:text-2xl font-light text-zinc-300 mt-2">
-                Hospital Operating ERP System
-              </div>
+              <h2 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-editorial text-white leading-none uppercase">
+                Mediathon<span className="text-zinc-500">.</span>
+              </h2>
+              <p className="text-lg sm:text-xl font-light text-zinc-300 mt-3">
+                Hospital Operating ERP & Clinical Diagnostic System
+              </p>
             </div>
 
-            {/* Cash Prize Strip */}
-            <div className="inline-block p-4 sm:p-6 rounded-xl border border-white/15 bg-black/60 backdrop-blur-md">
-              <div className="text-[11px] font-mono uppercase text-zinc-400 mb-1">
-                Cash Prize Awarded //
-              </div>
-              <div className="text-4xl sm:text-5xl font-mono font-bold text-white tracking-tight">
-                {achievement.prize}
-              </div>
-            </div>
-
-            {/* Description */}
-            <p className="text-base text-zinc-300 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed font-normal">
               {achievement.description}
             </p>
 
-            {/* Key Deliverables */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
+            {/* Highlights Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-zinc-800">
               {achievement.highlights.map((highlight, idx) => (
                 <div key={idx} className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-zinc-300 mt-0.5 flex-shrink-0" />
-                  <span className="text-xs text-zinc-400 leading-relaxed font-mono">
+                  <CheckCircle2 className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
+                  <span className="text-xs text-zinc-300 leading-relaxed font-mono">
                     {highlight}
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Bold Award & Prize Card Right (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end">
+            <div className="w-full max-w-md rounded-2xl border border-zinc-700 bg-zinc-900/90 p-8 sm:p-10 text-center flex flex-col items-center justify-between shadow-2xl relative overflow-hidden backdrop-blur-md">
+              {/* Subtle background glow */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-white/[0.04] rounded-full blur-2xl pointer-events-none" />
+
+              <div className="text-xs font-mono uppercase tracking-widest text-zinc-400 mb-3">
+                Cash Prize Awarded //
+              </div>
+
+              {/* Massive Prize Typography */}
+              <div className="text-5xl sm:text-6xl lg:text-7xl font-mono font-bold text-white tracking-tight my-4">
+                {achievement.prize}
+              </div>
+
+              <div className="text-xs font-mono text-zinc-400 border-t border-zinc-800 pt-4 w-full mt-2">
+                Awarded across competing university engineering teams for healthcare data structuring & clinical operations design.
+              </div>
             </div>
           </div>
         </div>

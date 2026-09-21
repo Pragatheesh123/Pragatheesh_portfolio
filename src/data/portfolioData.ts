@@ -50,7 +50,10 @@ export interface PortfolioData {
     tagline: string;
     bio: string;
     aboutHeading: string;
+    aboutSubtitle: string;
     aboutParagraphs: string[];
+    heroOpening: string;
+    heroTagline: string;
     institution: string;
     institutionShort: string;
     degree: string;
@@ -68,6 +71,7 @@ export interface PortfolioData {
     profilePhotoAlt: string;
   };
   signals: string[];
+  ticker: string[];
   experiences: Experience[];
   experience: Experience;
   projects: Project[];
@@ -176,8 +180,11 @@ export const portfolioData: PortfolioData = {
     name: "Pragatheesh Senthil",
     role: "Data Analyst",
     tagline: "I turn messy data into useful decisions.",
-    bio: "Final-year Computer Science student specializing in Big Data Analytics, currently working as a Data Analyst Intern at SRM Technology. Building practical analytical solutions with SQL, Excel, Power BI, and Python.",
-    aboutHeading: "More than just a dashboard.",
+    bio: "Final-year Computer Science student specializing in Big Data Analytics, building practical analytical solutions with SQL, Excel, Power BI and Python.",
+    heroOpening: "Pragatheesh builds.",
+    heroTagline: "Data is the profession. Curiosity is the personality.",
+    aboutHeading: "Not just a résumé.",
+    aboutSubtitle: "I'm interested in more than one kind of problem.",
     aboutParagraphs: [
       "I believe most data problems aren't about lacking charts—they're about asking the right questions before touching the software. As a final-year B.Tech Computer Science Engineering student specializing in Big Data Analytics at SRMIST, my focus is on transforming messy, fragmented tables into transparent insights that someone can actually take action on.",
       "My day-to-day stack centers around SQL, PostgreSQL, Microsoft Excel, Power BI, and Python. Whether that means writing multi-table CTEs to isolate compensation patterns across thousands of job listings, analyzing enterprise data at SRM Technology, or building automated Excel dashboards with dynamic slicers, I take pride in data hygiene, rigorous validation, and clean presentation.",
@@ -208,7 +215,20 @@ export const portfolioData: PortfolioData = {
     "Plays Football",
     "Chess Player",
     "Valorant",
+    "FC 26",
     "Cooks"
+  ],
+
+  ticker: [
+    "SQL",
+    "EXCEL",
+    "POWER BI",
+    "PYTHON",
+    "FOOTBALL",
+    "CHESS",
+    "VALORANT",
+    "FC 26",
+    "COOKING"
   ],
 
   experiences: [srmTechExperience, codebindExperience],
@@ -414,33 +434,41 @@ LIMIT 10;`,
     {
       id: "football",
       title: "Football",
-      category: "Team Athletics",
-      tagline: "Competitive, chaotic, and probably the fastest way to learn teamwork.",
+      category: "Outdoor / Team",
+      tagline: "Competitive, physical and social.",
       description: "Fast-paced, high pressure, and zero room for hesitation. Playing football taught me spatial awareness, quick tactical adjustments under pressure, and how individual accountability powers collective victory.",
       icon: "trophy"
     },
     {
       id: "chess",
       title: "Chess",
-      category: "Mental Strategy",
-      tagline: "Strategy, patience, pattern recognition.",
+      category: "Strategy / Patience",
+      tagline: "Patterns, decision making, thinking ahead.",
       description: "Evaluating candidate moves, understanding pawn structures, and managing positional trades under time constraints. It is the purest exercise in disciplined tactical calculation without the luxury of chance.",
       icon: "target"
     },
     {
       id: "valorant",
       title: "Valorant",
-      category: "Tactical Gaming",
-      tagline: "Team coordination, reaction time, decision-making.",
+      category: "Games / Team",
+      tagline: "Team coordination, fast decisions, reaction.",
       description: "Economy management, site executes, utility synergy, and clutch composure. Tactical FPS demands precise communication, split-second decision-making, and high emotional resilience.",
+      icon: "gamepad"
+    },
+    {
+      id: "fc26",
+      title: "FC 26",
+      category: "Football / Gaming",
+      tagline: "Tactical positioning & competitive football gaming.",
+      description: "Reading passing lanes, adapting formations under momentum shifts, and executing team coordination in high-stakes matches.",
       icon: "gamepad"
     },
     {
       id: "cooking",
       title: "Cooking",
-      category: "Creative Craft",
-      tagline: "Experimenting with ingredients, recipes, and occasionally questionable decisions.",
-      description: "Balancing flavors, adjusting heat levels, and learning what happens when you introduce unexpected variables. It is essentially an exploratory data pipeline for your tastebuds.",
+      category: "Kitchen / Experiment",
+      tagline: "Current signature: white-sauce pasta.",
+      description: "\"I make a genuinely good white-sauce pasta.\" Balancing flavors, adjusting heat levels, and learning what happens when you introduce unexpected variables. It is essentially an exploratory data pipeline for your tastebuds.",
       icon: "flame"
     }
   ],
